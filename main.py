@@ -1,17 +1,16 @@
 from tkinter import *
 from random import randint
 
-#please don't change the code
+#Please don't change the CODE!
 
 #window
 prozor = Tk()
 prozor.title('love calc')
 prozor.config(width=700, height=500)
 prozor.config(background='#f9e0ef')
-prozor.config(cursor='heart')
+prozor.config(cursor='spider')
 
 #title
-my_secret = os.environ['1623']
 naslov = Label(prozor,
                text='LOVE CALCULATOR',
                background='#f9e0ef',
@@ -50,24 +49,24 @@ def izracunaj():
 
 
 #main function
-
-
 def provjeri_prikazi():
     if len(z_unos.get()) == 0 or len(m_unos.get()) == 0:
         rez = Label(prozor,
-                    text='Enter name',
+                    text='Enter name!',
                     background='#fc79c5',
                     fg='white',
                     font=('Chilanka', 26))
-        rez.place(x=70, y=210)
+        rez.place(x=290, y=260)
 
     else:
+
         rez = Label(prozor,
-                    text=' ' + str(izracunaj()) + '%',
-                    font=('Arial', 43),
-                    background='white',
-                    fg='#f99dd3')
+                    text='        ' + str(izracunaj()) + '%      ',
+                    font=('Chilanka', 26),
+                    background='#fc79c5',
+                    fg='white')
         rez.place(x=290, y=260)
+
 
 
 #button
@@ -75,7 +74,7 @@ gumb = Button(
     prozor,
     text='Calculate!',
     font=('Arial', 20),
-    background='BLACK',
+    background='black',
     fg='white',
     command=lambda: [provjeri_prikazi(), izracunaj()])
 gumb.place(x=290, y=180)
@@ -83,6 +82,6 @@ gumb.place(x=290, y=180)
 #image
 logo = PhotoImage(file='heart.gif')
 okvir = Label(prozor, image=logo, borderwidth=0)
-okvir.place(x=640, y=430)
+okvir.place(x=640, y=300)
 
 prozor.mainloop()
