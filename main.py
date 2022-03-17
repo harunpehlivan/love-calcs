@@ -44,8 +44,7 @@ m_unos.place(x=450, y=120)
 
 #random number generator
 def izracunaj():
-    n = randint(1, 100)
-    return n
+    return randint(1, 100)
 
 
 #main function
@@ -56,16 +55,18 @@ def provjeri_prikazi():
                     background='#fc79c5',
                     fg='white',
                     font=('Chilanka', 26))
-        rez.place(x=290, y=260)
-
     else:
 
-        rez = Label(prozor,
-                    text='        ' + str(izracunaj()) + '%      ',
-                    font=('Chilanka', 26),
-                    background='#fc79c5',
-                    fg='white')
-        rez.place(x=290, y=260)
+        rez = Label(
+            prozor,
+            text=f'        {str(izracunaj())}%      ',
+            font=('Chilanka', 26),
+            background='#fc79c5',
+            fg='white',
+        )
+
+
+    rez.place(x=290, y=260)
 
 
 
